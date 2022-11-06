@@ -1,0 +1,7 @@
+{
+  "name": "Food Scheduler Ionic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
