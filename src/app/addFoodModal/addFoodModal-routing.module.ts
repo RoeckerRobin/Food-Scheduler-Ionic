@@ -1,17 +1,18 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { HomePage } from './home.page';
+import { Routes, RouterModule } from '@angular/router';
+
+import { AddFoodModalPage } from './addFoodModal.page';
 import {ReactiveFormsModule} from '@angular/forms';
 
 const routes: Routes = [
   {
     path: '',
-    component: HomePage,
+    component: AddFoodModalPage
   }
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes), ReactiveFormsModule],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class HomePageRoutingModule {}
+export class ModalPageRoutingModule {}
