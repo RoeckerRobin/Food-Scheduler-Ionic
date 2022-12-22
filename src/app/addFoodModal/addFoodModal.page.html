@@ -5,18 +5,18 @@
     </ion-buttons>
     <ion-title>Add Food</ion-title>
     <ion-buttons slot="end">
-      <ion-button color="primary" (click)="confirm()" disabled="{{!this.form.valid}}">Confirm </ion-button>
+      <ion-button color="primary" (click)="confirm()" disabled="{{!this.form.valid}}">Confirm</ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 <ion-content class="ion-padding">
   <div [formGroup]="form">
-  <ion-item>
-    <ion-label position="stacked">Name</ion-label>
-    <ion-input [(ngModel)] = inputName placeholder="Enter text" formControlName="name"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-datetime [(ngModel)]= inputDate formControlName="date"></ion-datetime>
-  </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Name</ion-label>
+      <ion-input [(ngModel)]=inputName placeholder="Enter text" formControlName="name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-datetime [(ngModel)]=inputDate formControlName="date"></ion-datetime>
+    </ion-item>
   </div>
 </ion-content>

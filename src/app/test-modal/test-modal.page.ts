@@ -1,12 +1,13 @@
 import {Component, OnInit} from '@angular/core';
-import { ModalController } from '@ionic/angular';
+import {ModalController} from '@ionic/angular';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-modal-example',
   templateUrl: 'test-modal.page.html',
 })
-export class TestModalPage implements OnInit{
+
+export class TestModalPage implements OnInit {
   form: FormGroup;
   buttonName = 'start';
   buttonColor = 'success';
@@ -14,7 +15,8 @@ export class TestModalPage implements OnInit{
   numberOfSeconds = 0;
   runTest = false;
 
-  constructor(private modalCtrl: ModalController, public formBuilder: FormBuilder) {}
+  constructor(private modalCtrl: ModalController, public formBuilder: FormBuilder) {
+  }
 
   ngOnInit() {
     this.form = this.formBuilder.group({
@@ -36,7 +38,7 @@ export class TestModalPage implements OnInit{
       }
       const start = new Date().getTime();
       let end = start;
-      while(end < start + 1000) {
+      while (end < start + 1000) {
         end = new Date().getTime();
       }
     }

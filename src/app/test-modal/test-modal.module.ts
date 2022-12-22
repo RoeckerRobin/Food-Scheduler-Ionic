@@ -1,12 +1,9 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-
-import { IonicModule } from '@ionic/angular';
-
-import { TestModalPageRoutingModule } from './test-modal-routing.module';
-
-import { TestModalPage } from './test-modal.page';
+import {IonicModule} from '@ionic/angular';
+import {TestModalPageRoutingModule} from './test-modal-routing.module';
+import {TestModalPage} from './test-modal.page';
 
 @NgModule({
   imports: [
@@ -18,4 +15,6 @@ import { TestModalPage } from './test-modal.page';
   ],
   declarations: [TestModalPage]
 })
-export class TestModalPageModule {}
+
+export class TestModalPageModule {
+}

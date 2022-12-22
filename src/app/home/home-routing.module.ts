@@ -1,6 +1,6 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { HomePage } from './home.page';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
+import {HomePage} from './home.page';
 import {ReactiveFormsModule} from '@angular/forms';
 
 const routes: Routes = [
@@ -14,4 +14,5 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes), ReactiveFormsModule],
   exports: [RouterModule]
 })
-export class HomePageRoutingModule {}
+export class HomePageRoutingModule {
+}

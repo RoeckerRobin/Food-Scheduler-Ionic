@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import { ModalController } from '@ionic/angular';
+import {ModalController} from '@ionic/angular';
 import {FoodItem} from '../home/interfaces/foodItem';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
@@ -8,13 +8,14 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
   templateUrl: './addFoodModal.page.html',
   styleUrls: ['./addFoodModal.page.scss'],
 })
-export class AddFoodModalPage implements OnInit{
+export class AddFoodModalPage implements OnInit {
   form: FormGroup;
   submitted = false;
   inputName = '';
   inputDate = '';
 
-  constructor(private modalCtrl: ModalController, public formBuilder: FormBuilder) { }
+  constructor(private modalCtrl: ModalController, public formBuilder: FormBuilder) {
+  }
 
   ngOnInit() {
     this.form = this.formBuilder.group({
@@ -28,7 +29,6 @@ export class AddFoodModalPage implements OnInit{
   }
 
   confirm() {
-    return this.modalCtrl.dismiss(new FoodItem(this.inputName,new Date(Date.parse(this.inputDate))), 'confirm');
+    return this.modalCtrl.dismiss(new FoodItem(this.inputName, new Date(Date.parse(this.inputDate))), 'confirm');
   }
-
 }

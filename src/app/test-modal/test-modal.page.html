@@ -8,14 +8,18 @@
 </ion-header>
 <ion-content class="ion-padding">
   <div [formGroup]="form">
-  <ion-item>
-    <ion-label position="stacked">Number of objects generate per second</ion-label>
-    <ion-input type="number" [(ngModel)] = numberOfObjects placeholder="Enter the number of objects generated per second" formControlName="numberOfObjectsForm"></ion-input>
-  </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Number of objects generate per second</ion-label>
+      <ion-input type="number" [(ngModel)]=numberOfObjects
+                 placeholder="Enter the number of objects generated per second"
+                 formControlName="numberOfObjectsForm"></ion-input>
+    </ion-item>
     <ion-item>
       <ion-label position="stacked">Number of seconds</ion-label>
-      <ion-input type="number" [(ngModel)] = numberOfSeconds placeholder="Enter the number second the test should last" formControlName="numberOfSecondsForm"></ion-input>
-  </ion-item>
+      <ion-input type="number" [(ngModel)]=numberOfSeconds placeholder="Enter the number second the test should last"
+                 formControlName="numberOfSecondsForm"></ion-input>
+    </ion-item>
   </div>
-  <ion-button color="{{buttonColor}}" expand="full" (click)="startTest()" disabled="{{!(!this.runTest && this.form.valid)}}">{{buttonName}}</ion-button>
+  <ion-button color="{{buttonColor}}" expand="full" (click)="startTest()"
+              disabled="{{!(!this.runTest && this.form.valid)}}">{{buttonName}}</ion-button>
 </ion-content>

@@ -1,7 +1,6 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-
-import { AddFoodModalPage } from './addFoodModal.page';
+import {NgModule} from '@angular/core';
+import {Routes, RouterModule} from '@angular/router';
+import {AddFoodModalPage} from './addFoodModal.page';
 import {ReactiveFormsModule} from '@angular/forms';
 
 const routes: Routes = [
@@ -15,4 +14,5 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes), ReactiveFormsModule],
   exports: [RouterModule],
 })
-export class ModalPageRoutingModule {}
+export class ModalPageRoutingModule {
+}
