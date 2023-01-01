@@ -18,7 +18,7 @@ export class DataService {
   }
 
   getData() {
-    return this.storage.get(STORAGE_KEY) || [];
+    return this.storage.get(STORAGE_KEY);
   }
 
   async setData(storedData) {
