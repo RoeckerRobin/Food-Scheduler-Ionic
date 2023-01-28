@@ -40,7 +40,10 @@ export class HomePage {
   }
 
   async loadData() {
-    this.foodItemList = await this.dataService.getData();
+    const loadedFoodItemList = await this.dataService.getData();
+    if (loadedFoodItemList.length !== 0){
+      this.foodItemList = loadedFoodItemList;
+    }
   }
 
   async deleteFoodItem(foodItem: FoodItem) {
