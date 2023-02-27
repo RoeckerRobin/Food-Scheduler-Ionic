@@ -41,7 +41,7 @@ export class HomePage {
 
   async loadData() {
     const loadedFoodItemList = await this.dataService.getData();
-    if (loadedFoodItemList.length !== 0){
+    if (loadedFoodItemList.length !== 0) {
       this.foodItemList = loadedFoodItemList;
     }
   }
